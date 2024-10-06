@@ -1,0 +1,35 @@
+/* Basic styling for main sections */
+.main-section {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Navbar styling */
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .main-section {
+    margin: 5px;
+    padding: 10px;
+  }
+}
