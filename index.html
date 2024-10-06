@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main-doc">
+       <nav class="navbar" id="navbar">
+        <header id="na">
+          <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Alternate_Implementations" class="nav-link">Alternate Implementations</a></li>
+            <li><a href="#CPython" class="nav-link">CPython</a></li>
+            <li><a href="#Jython" class="nav-link">Jython</a></li>
+            <li><a href="#Python_for_.NET" class="nav-link">Python for .NET</a></li>
+            <li><a href="#IronPython" class="nav-link">IronPython</a></li>
+            <li><a href="#PyPy" class="nav-link">PyPy</a></li>
+            <li><a href="#Notation" class="nav-link">Notation</a></li>
+          </ul>
+        </header>
+      </nav>
+      <section class="main-section" id="Introduction">
+       <header id="Introduction">
+          <h1 id="introduction">
+          Introduction
+          </h1>
+        </header>
+        
+        <p id="intro">
+          This reference manual describes the Python programming language. It is
+          not intended as a tutorial.
+        </p>
+
+        <p id="first">
+          While I am trying to be as precise as possible, I chose to use English
+          rather than formal specifications for everything except syntax and
+          lexical analysis. This should make the document more understandable to
+          the average reader, but will leave room for ambiguities. Consequently,
+          if you were coming from Mars and tried to re-implement Python from
+          this document alone, you might have to guess things and in fact you
+          would probably end up implementing quite a different language. On the
+          other hand, if you are using Python and wonder what the precise rules
+          about a particular area of the language are, you should definitely be
+          able to find them here. If you would like to see a more formal
+          definition of the language, maybe you could volunteer your time — or
+          invent a cloning machine :-).
+        </p>
+
+        <p id="second">
+          It is dangerous to add too many implementation details to a language
+          reference document — the implementation may change, and other
+          implementations of the same language may work differently. On the
+          other hand, CPython is the one Python implementation in widespread use
+          (although alternate implementations continue to gain support), and its
+          particular quirks are sometimes worth being mentioned, especially
+          where the implementation imposes additional limitations. Therefore,
+          you’ll find short “implementation notes” sprinkled throughout the
+          text.
+        </p>
+
+        <p id="third">
+          Every Python implementation comes with a number of built-in and
+          standard modules. These are documented in
+          <nav class="navbar" id="nav">
+            <a
+              href="https://docs.python.org/3/library/index.html#library-index"
+              target="_blank"
+              class="library"
+              id="link"
+              >The Python Standard Library</a
+            >. A few built-in modules are mentioned when they interact in a
+            significant way with the language definition.
+         </nav>
+        </p>
+      </section>
+
+      <section class="main-section" id="Alternate_Implementations">
+        <header id="Alternate_Implementations">
+          <h4 id="alternate">
+       Alternate Implementations
+          </h4>
+        </header>
+        <p id="fourth">
+          Though there is one Python implementation which is by far the most
+          popular, there are some alternate implementations which are of
+          particular interest to different audiences.
+        </p>
+        <p id="fifth">Known implementations include:</p>
+      </section>
+
+      <section class="main-section" id="CPython">
+        <header id="CPython">
+         CPython
+        </header>
+        <p id="sixth">
+          This is the original and most-maintained implementation of Python,
+          written in C. New language features generally appear here first.
+        </p>
+      </section>
+
+      <section class="main-section" id="Jython">
+        <header id="Jython">
+          Jython
+        </header>
+        <p id="seventh">
+          Python implemented in Java. This implementation can be used as a
+          scripting language for Java applications, or can be used to create
+          applications using the Java class libraries. It is also often used to
+          create tests for Java libraries. More information can be found at the
+          <nav id="navbar">
+            <a href="https://www.jython.org/" id="jython_website" target="_blank"
+              >Jython website</a
+            >.
+          </nav>
+        </p>
+      </section>
+
+      <section class="main-section" id="Python_for_.NET">
+        <header id="Python_for_.NET">
+          Python for .NET
+        </header>
+        <p id="eighth">
+          This implementation actually uses the CPython implementation, but is a
+          managed .NET application and makes .NET libraries available. It was
+          created by Brian Lloyd. For more information, see the
+          <nav id="navbar">
+            <a href="https://pythonnet.github.io/" target="_blank" id="net"
+              >Python for .NET home page</a
+            >.
+          </nav>
+        </p>
+      </section>
+
+      <section class="main-section" id="IronPython">
+        <header id="IronPython">
+          IronPython
+        </header>
+        <p id="ninth">
+          An alternate Python for .NET. Unlike Python.NET, this is a complete
+          Python implementation that generates IL, and compiles Python code
+          directly to .NET assemblies. It was created by Jim Hugunin, the
+          original creator of Jython. For more information, see
+          <nav id="navbar">
+            <a href="https://ironpython.net/" target="_blank" id="ironpython"
+              >the IronPython website</a
+            >.
+          </nav>
+        </p>
+      </section>
+
+      <section class="main-section" id="PyPy">
+        <header id="PyPy">
+         PyPy
+        </header>
+        <p id="tenth">
+          An implementation of Python written completely in Python. It supports
+          several advanced features not found in other implementations like
+          stackless support and a Just in Time compiler. One of the goals of the
+          project is to encourage experimentation with the language itself by
+          making it easier to modify the interpreter (since it is written in
+          Python). Additional information is available on
+          <nav id="navbar">
+            <a href="https://pypy.org/" id="py" target="_blank"
+              >the PyPy project’s home page</a
+            >.
+          </nav>
+        </p>
+      </section>
+
+      <section class="main-section" id="Notation">
+        <header id="Notation">
+          <h4 id="notation">
+          Notation
+          </h4>
+        </header>
+        <p id="eleventh">
+          The descriptions of lexical analysis and syntax use a modified
+          <nav id="navbar">
+            <a
+              href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form"
+              id="bnf"
+              target="_blank"
+              >Backus–Naur form (BNF)</a
+            >
+          </nav>
+          grammar notation. This uses the following style of definition:
+        </p>
+        <div id="code">
+          <code id="code">
+            name ::= lc_letter (lc_letter | "_")*<br />
+            lc_letter ::= "a"..."z"
+          </code>
+        </div>
+        <p id="twelfth">
+          The first line says that a name is an lc_letter followed by a sequence
+          of zero or more lc_letters and underscores. An lc_letter in turn is
+          any of the single characters 'a' through 'z'. (This rule is actually
+          adhered to for the names defined in lexical and grammar rules in this
+          document.)
+        </p>
+        <p id="thirteenth">
+          Each rule begins with a name (which is the name defined by the rule)
+          and<code id="code"> ::= </code>. A vertical bar (|) is used to
+          separate alternatives; it is the least binding operator in this
+          notation. A star <code id="code">(*)</code> means zero or more
+          repetitions of the preceding item; likewise, a plus
+          <code id="code">(+)</code> means one or more repetitions, and a phrase
+          enclosed in square brackets <code id="code">([ ])</code> means zero or
+          one occurrences (in other words, the enclosed phrase is optional). The
+          * and + operators bind as tightly as possible; parentheses are used
+          for grouping. Literal strings are enclosed in quotes. White space is
+          only meaningful to separate tokens. Rules are normally contained on a
+          single line; rules with many alternatives may be formatted
+          alternatively with each line after the first beginning with a vertical
+          bar.
+        </p>
+
+        <p id="fourteenth">
+          In lexical definitions (as the example above), two more conventions
+          are used: Two literal characters separated by three dots mean a choice
+          of any single character in the given (inclusive) range of ASCII
+          characters. A phrase between angular brackets
+          <code id="code">(<...>)</code> gives an informal description of the
+          symbol defined; e.g., this could be used to describe the notion of
+          ‘control character’ if needed.
+        </p>
+         <ul>
+           <nav id="navbar"><footer id="link">
+        <li>Introduction
+          <ul><li>Notes on availability</li></ul>
+        </li>
+        <li><a id="function">Built-in Functions</a></li>
+        <li>Built-in Constants</li>
+        <ul><li>Constants added by the site module</li></ul>
+        <li>Built-in Types</li>
+        <li><a id="built-in">Built-in Exceptions</a></li>
+     </footer></nav> </ul>
+        </section>
+    </main>
+  </body>
+</html>
